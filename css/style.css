@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+}
+.showText{
+    margin: 20px 0;
+    font-size: 35px;
+}
+.showList{
+    list-style: none;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+li{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    position: relative;
+    margin: 5px 0;
+}
+.check{
+    height: 27px;
+    width: 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+}
+input{
+    height: 30px;
+    width: 150px;
+    margin-top: 3px;
+    position: absolute;
+    opacity: 0;
+}
+label {
+    font-size: 30px;
+    line-height: 30px;
+    user-select: none;
+}
+.item:before{
+    content: "";
+    border-top: 2px solid black;
+    width: 0;
+    position: absolute;
+    top: 50%;
+    transition: all 0.35s linear;
+}
+.project:checked ~ .item:before{
+    width: 100px;
+}
+.item{
+    margin-left: 10px;
+}
+.project:checked~.check{
+    transform: rotateZ(45deg);
+    border-width: 0 1px 1px 0;
+}
